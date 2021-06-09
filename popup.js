@@ -82,7 +82,7 @@ browser.tabs.query({ currentWindow: true, active: true }).then(tabs => {
 			const node = document.importNode(elementsTpl.content, true)
 			node.querySelector('.element-label').textContent = `${el.type} in frame ${fid}`
 			const gain = node.querySelector('.element-gain')
-			gain.value = settings.gain || 1
+			gain.value = settings.gain || 2
 			gain.parentElement.querySelector('.target').textContent = '' + gain.value
 			gain.addEventListener('change', _ => {
 				applySettings(fid, elid, { gain: gain.value })
